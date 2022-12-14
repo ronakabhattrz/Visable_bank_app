@@ -1,9 +1,10 @@
 class Transaction < ApplicationRecord
   # Associations
-  belongs_to :account
+  belongs_to :from_account, foreign_key: 'from_account_id', class_name: 'Account'
+  belongs_to :to_account, foreign_key: 'to_account_id', class_name: 'Account'
 
   # Validations
-  validates :account, presence: true
+  validates :to_account, :from_account, presence: true
   validates :amount, presence: true, numericality: true
   validates :transaction_number, uniqueness: true
 

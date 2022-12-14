@@ -8,7 +8,7 @@ class Account < ApplicationRecord
   enum account_type: %i(saving, checking)
 
   # Associations
-  has_many :transactions
+  has_many :transactions, foreign_key: 'to_account_id', class_name: 'Transaction'
 
   # CALLBACKS
   before_create :set_account_number

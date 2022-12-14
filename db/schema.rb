@@ -27,12 +27,15 @@ ActiveRecord::Schema.define(version: 2022_12_14_133829) do
 
   create_table "transactions", force: :cascade do |t|
     t.decimal "amount"
-    t.bigint "account_id"
+    t.bigint "from_account_id"
+    t.bigint "to_account_id"
     t.string "transaction_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["account_id"], name: "index_transactions_on_account_id"
+    t.index ["from_account_id"], name: "index_transactions_on_from_account_id"
+    t.index ["to_account_id"], name: "index_transactions_on_to_account_id"
   end
 
-  add_foreign_key "transactions", "accounts"
+  add_foreign_key "transactions", "accounts", column: "from_account_id"
+  add_foreign_key "transactions", "accounts", column: "to_account_id"
 end
