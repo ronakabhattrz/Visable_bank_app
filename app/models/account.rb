@@ -24,4 +24,8 @@ class Account < ApplicationRecord
       break token unless Account.where(account_number: token).exists?
     end
   end
+
+  def balance
+    ActiveSupport::NumberHelper.number_to_currency(balance_cents.fdiv(100))
+  end
 end
