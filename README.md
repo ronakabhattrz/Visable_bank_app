@@ -11,17 +11,18 @@ Imagine you have bank accounts with transactions and balance. You don’t need t
 3. Build a REST endpoint to transfer money between accounts. Your REST action should use the service class you built in task 1.
 
 
-
-## endpoints
+## ENDPOINTS
 
 1. **Show Account Balance** 
 
-    ![](../../../../../var/folders/4f/b78d212j0756zprfb8ccpjt40000gn/T/TemporaryItems/NSIRD_screencaptureui_7DbZyN/Screenshot 2022-12-15 at 1.55.10 PM.png)
+    ![](public/1.png)
+
 
 1. **Get Last 10 Transactions**
 
-    ![](../../../../../var/folders/4f/b78d212j0756zprfb8ccpjt40000gn/T/TemporaryItems/NSIRD_screencaptureui_qRw5jP/Screenshot 2022-12-15 at 1.56.22 PM.png)
+    ![](public/2.png)
+
 
 1. **Make a Trasfer (1 account to another account)**
 
-    ![](../../../../../var/folders/4f/b78d212j0756zprfb8ccpjt40000gn/T/TemporaryItems/NSIRD_screencaptureui_bcLgsF/Screenshot 2022-12-15 at 1.57.09 PM.png)
+    ![](public/3.png)
